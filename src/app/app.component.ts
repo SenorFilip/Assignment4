@@ -7,14 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  oddNumbers = [];
-  evenNumbers = [];
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
 
-  onStartButtonPress(buttonPressData: {number: number}) {
-    buttonPressData.number % 2 === 0 ?
-      this.evenNumbers.push(buttonPressData.number) :
-      this.oddNumbers.push(buttonPressData.number);
-    console.log('odd: ' + this.oddNumbers + ' even: ' + this.evenNumbers);
+  // onStartButtonPress(buttonPressData: {number: number}) {
+  onStartButtonPress(buttonPressData: number) {
+    buttonPressData % 2 === 0 ?
+      this.evenNumbers.push(buttonPressData) :
+      this.oddNumbers.push(buttonPressData);
+    // console.log('odd: ' + this.oddNumbers + ' even: ' + this.evenNumbers);
   }
 
 }
